@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designing AI-assisted property insights at Propvia — Corien Zavod</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">CZ</span>
+        <span class="logo-text">Corien Zavod</span>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#blog">Writing</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" style="max-width: 720px;">
+        <p class="hero-kicker">Article</p>
+        <h1>Designing AI-assisted property insights at Propvia</h1>
+        <p class="hero-subtitle">
+          How I worked as a Mobile Developer Intern on an AI-powered property analytics
+          product and what I learned about making complex data feel simple and human.
+        </p>
+
+        <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 28px;">
+          By Corien Zavod · 2025
+        </p>
+
+        <h2>Starting with a messy, real-world problem</h2>
+        <p>
+          When I joined Propvia as a Mobile Developer Intern, the goal wasn’t just to
+          ship another app screen — it was to help investors make faster, smarter
+          decisions about real properties in real neighborhoods. The product pulls in a
+          lot of data: vacancy information, risk indicators, neighborhood metrics, and
+          more. Without good UX, all of that can quickly turn into noise.
+        </p>
+
+        <p>
+          My job was to help bring Propvia’s web experience to mobile while keeping it
+          focused, approachable, and useful in the moments when investors actually need
+          it — on the go, in the field, or between meetings.
+        </p>
+
+        <h2>Where AI comes in</h2>
+        <p>
+          Under the hood, Propvia uses AI to evaluate properties and surface insights
+          that would be hard to see at a glance. Instead of asking users to dig through
+          raw numbers, the product can highlight patterns, risks, and opportunities and
+          turn them into plain-language guidance.
+        </p>
+
+        <p>
+          For me as a UX-focused developer, that meant thinking about questions like:
+        </p>
+
+        <ul class="project-details">
+          <li>How do we present AI-generated insights so they feel trustworthy, not mysterious?</li>
+          <li>How much detail should we show by default vs. behind a tap?</li>
+          <li>How can we let users drill into the data without overwhelming them?</li>
+        </ul>
+
+        <h2>Designing the mobile experience</h2>
+        <p>
+          On mobile, screen space is tight, attention is short, and context is constantly
+          shifting. I collaborated with designers to adapt the design system to mobile,
+          then implemented key flows using React Native and Expo. We focused on:
+        </p>
+
+        <ul class="project-details">
+          <li>Making property summaries scannable in a few seconds</li>
+          <li>Highlighting the most important AI-driven callouts first</li>
+          <li>Keeping actions like saving, comparing, or sharing properties easy to reach</li>
+        </ul>
+
+        <p>
+          Throughout the internship, I iterated based on feedback from the team, adjusting
+          layouts, copy, and interactions to make sure the AI never felt like a black box
+          bolted onto the side of the app. Instead, it needed to feel like a natural
+          extension of the product.
+        </p>
+
+        <h2>What I learned about AI-assisted product design</h2>
+        <p>
+          The biggest lesson for me was that “AI features” aren’t that interesting on their
+          own. What matters is how they show up in the experience. Some takeaways:
+        </p>
+
+        <ul class="project-details">
+          <li>AI should reduce cognitive load, not increase it.</li>
+          <li>Clear, honest language builds more trust than technical jargon.</li>
+          <li>Users appreciate having both a quick summary and a way to dig deeper.</li>
+        </ul>
+
+        <p>
+          Working on Propvia showed me how UX, engineering, and AI can come together to
+          solve real problems — not just as a buzzword, but as part of a thoughtful,
+          human-centered product.
+        </p>
+
+        <p>
+          Going forward, I’m excited to keep exploring how AI can support people’s
+          decision-making without taking control away from them — whether that’s in
+          real estate, event navigation, or whatever problem I get to work on next.
+        </p>
+
+        <p style="margin-top: 32px;">
+          <a href="index.html#blog" class="project-link">← Back to all writing</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Corien Zavod. All rights reserved.</span>
+      <span class="footer-links">
+        <a href="index.html">Home</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
