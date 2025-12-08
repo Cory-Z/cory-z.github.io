@@ -24,6 +24,7 @@
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#skills">Skills</a>
+        <a href="#blog">Blog</a>
         <a href="#resume">Resume</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
@@ -206,7 +207,7 @@
             </ul>
             <div class="project-footer">
               <span class="project-role">Role: UX Designer</span>
-              <!-- Replace # with real case study link later -->
+            
               <a href="https://www.figma.com/proto/zBtA0T9cZYpsZMkHaetEdC/CrowdCadence-Prototype-1?node-id=348-19&starting-point-node-id=348%3A19"
    class="project-link" target="_blank" rel="noopener">
   View full project ↗
@@ -268,39 +269,66 @@
     </section>
 
     <!-- Blog / Writing -->
-<section id="blog" class="section">
+<section id="blog" class="section animate-on-scroll">
   <div class="container">
     <div class="section-header">
-      <h2>Writing</h2>
-      <p>Short reflections on UX, AI, and product work.</p>
+      <h2>Blog</h2>
+      <p>My reflections on UX, AI, and product design.</p>
     </div>
 
-    <div class="projects-grid">
-      <article class="project-card">
-        <div class="project-meta">
-          <span class="pill">Article</span>
-          <span class="pill pill-soft">UX • AI • Product</span>
-        </div>
-
-        <h3>Designing AI-assisted property insights at Propvia</h3>
-
-        <p class="project-summary">
-          A behind-the-scenes look at how I worked on Propvia’s property
-          analytics experience as a Mobile Developer Intern — and how we used
-          AI to turn complex data into simple, useful guidance for investors.
-        </p>
-
-        <div class="project-footer">
-          <span class="project-role">Published: 2025</span>
-          <a href="blog-ai-propvia.html"
-             class="project-link"
-             target="_blank"
-             rel="noopener">
-            Read article ↗
-          </a>
-        </div>
-      </article>
+   <div class="projects-grid">
+  <!-- Article 1: Propvia AI -->
+  <article class="project-card">
+    <div class="project-meta">
+      <span class="pill">Article</span>
+      <span class="pill pill-soft">UX • AI • Product</span>
     </div>
+
+    <h3>Designing AI-assisted property insights at Propvia</h3>
+
+    <p class="project-summary">
+      A behind-the-scenes look at how I worked on Propvia’s property analytics
+      experience as a Mobile Developer Intern — and how we used AI to turn
+      complex data into simple, useful guidance for investors.
+    </p>
+
+    <div class="project-footer">
+      <span class="project-role">Published: 2025</span>
+      <a href="blog-ai-propvia.html"
+         class="project-link"
+         target="_blank"
+         rel="noopener">
+        Read article ↗
+      </a>
+    </div>
+  </article>
+
+  <!-- Article 2: Path into HCD -->
+  <article class="project-card">
+    <div class="project-meta">
+      <span class="pill">Article</span>
+      <span class="pill pill-soft">HCD • Career • Reflection</span>
+    </div>
+
+    <h3>How I found my way into Human-Centered Design</h3>
+
+    <p class="project-summary">
+      A reflection on starting in engineering, realizing I was most excited
+      about the people and product side of technology, and how that led me to
+      Human-Centered Design & Development at Penn State.
+    </p>
+
+    <div class="project-footer">
+      <span class="project-role">Published: 2025</span>
+      <a href="blog-hcdd-path.html"
+         class="project-link"
+         target="_blank"
+         rel="noopener">
+        Read article ↗
+      </a>
+    </div>
+  </article>
+</div>
   </div>
 </section>
 
@@ -360,8 +388,35 @@ and collaborations. If you have a problem that needs better UX (or just
   </footer>
 
   <script>
+  document.addEventListener('DOMContentLoaded', () => {
     // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    // Scroll-in animation for sections with .animate-on-scroll
+    const targets = document.querySelectorAll('.animate-on-scroll');
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      targets.forEach((el) => observer.observe(el));
+    } else {
+      // Fallback: show them if IntersectionObserver isn't supported
+      targets.forEach((el) => el.classList.add('is-visible'));
+    }
+  });
+</script>
 </body>
 </html>
