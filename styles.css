@@ -459,10 +459,6 @@ body {
   gap: 10px;
 }
 
-.resume-panel .btn {
-  min-width: 220px;
-}
-
 .resume-note {
   font-size: 0.85rem;
   color: var(--text-muted);
